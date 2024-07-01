@@ -7,13 +7,14 @@ from sensor.pipeline.training_pipeline import TrainPipeline
 import os
 from sensor.utils.main_utils import read_yaml_file
 from sensor.constant.training_pipeline import SAVED_MODEL_DIR
+from sensor.ml.model.estimator import ModelResolver,TargetValueMapping
+from sensor.utils.main_utils import load_object
 from fastapi import FastAPI
 from sensor.constant.application import APP_HOST, APP_PORT
 from starlette.responses import RedirectResponse
 from uvicorn import run as app_run
 from fastapi.responses import Response
-from sensor.ml.model.estimator import ModelResolver,TargetValueMapping
-from sensor.utils.main_utils import load_object
+
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
